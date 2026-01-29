@@ -6,9 +6,38 @@
 [![Kafka](https://img.shields.io/badge/Kafka-Streaming-red?logo=apachekafka)](https://kafka.apache.org/) 
 [![PySpark](https://img.shields.io/badge/PySpark-ETL-orange?logo=apache-spark)](https://spark.apache.org/)
 
-End-to-end real-time data engineering pipeline for e-commerce events, showcasing a Medallion architecture (Bronze → Silver → Gold), built with FastAPI, Kafka, NiFi, PostgreSQL, PySpark, Airflow, and containerized using Docker.
+End-to-end event-driven data platform simulating real-world e-commerce workloads, designed to demonstrate scalable streaming + batch data engineering, modern Medallion architecture, and production-style orchestration.
+
+The system ingests real-time order events, processes them through Kafka-based streaming pipelines, and produces analytics-ready datasets optimized for reporting and performance analysis.
+# 🔍 Problem This Project Solves
+E-commerce systems generate high-volume, event-driven data that must be:
+
+- Ingested in real time
+
+- Cleaned and deduplicated
+
+- Modeled for analytics
+
+- Reliable across reprocessing and late-arriving events
+
+This project demonstrates how to design a scalable, cloud-portable event-driven data platform supporting both streaming and batch analytics.
+
 # 🚀 Architecture Overview
 ![Data System Design](docs/data_system_design.png)
+
+## Key architectural decisions:
+
+- Kafka for durable, scalable event ingestion
+
+- NiFi for streaming flow management and observability
+
+- Spark (PySpark) for distributed transformations
+
+- Medallion Architecture for data quality and reprocessing
+
+- Airflow for orchestration and dependency management
+
+- Docker for reproducible local execution
 
 # ✅ Key Highlights
 
@@ -70,6 +99,12 @@ The project includes Airflow DAGs to orchestrate PySpark transformations for all
 
 - Ensures accurate analytics through deduplication and timestamp-based ordering
 
+# ⚖️ Trade-offs & Limitations
+- **PostgreSQL storage** used for simplicity; object storage with Delta/Iceberg would scale better.
+- **Simplified monitoring**; full production observability is not included.
+- **Dockerized local execution** used instead of managed cloud services.
+- - **Schema evolution** handled in PySpark rather than with a formal schema registry.
+
 # 📂 Repository Structure
 
 Event-Driven_E-Commerce_Data_Platform/
@@ -90,7 +125,7 @@ Event-Driven_E-Commerce_Data_Platform/
 
 - Anyone building real-time data pipelines with Kafka, PySpark, and PostgreSQL
 
-# 🛠 Technologies Used
+# 🧰 Tech Stack
 
 - Python (FastAPI, PySpark)
 
@@ -101,6 +136,11 @@ Event-Driven_E-Commerce_Data_Platform/
 - Airflow (DAG orchestration)
 
 - Docker (Containerization)
+
+# 👤 Author Notes
+
+This project was designed to reflect real-world data engineering challenges, including streaming ingestion, reprocessing, orchestration, and analytics modeling.
+It demonstrates how I approach system design, data quality, and scalability in modern data platforms.
 
 # 🛡️ License
 
