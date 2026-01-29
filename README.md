@@ -6,10 +6,12 @@
 [![Kafka](https://img.shields.io/badge/Kafka-Streaming-red?logo=apachekafka)](https://kafka.apache.org/) 
 [![PySpark](https://img.shields.io/badge/PySpark-ETL-orange?logo=apache-spark)](https://spark.apache.org/)
 
-End-to-end event-driven data platform simulating real-world e-commerce workloads, designed to demonstrate scalable streaming + batch data engineering, modern Medallion architecture, and production-style orchestration.
+End-to-end event-driven data platform simulating real-world e-commerce workloads, designed to demonstrate scalable **streaming + batch data engineering, modern Medallion architecture, and production-style orchestration** .
 
-The system ingests real-time order events, processes them through Kafka-based streaming pipelines, and produces analytics-ready datasets optimized for reporting and performance analysis.
+The system ingests **real-time order events**, processes them through **Kafka-based streaming pipelines**, and produces analytics-ready datasets optimized for reporting and performance analysis.
+
 # 🔍 Problem This Project Solves
+
 E-commerce systems generate high-volume, event-driven data that must be:
 
 - Ingested in real time
@@ -41,13 +43,13 @@ This project demonstrates how to design a scalable, cloud-portable event-driven 
 
 # ✅ Key Highlights
 
-- Scalable real-time data streaming from FastAPI → Kafka(3-broker cluster) → NiFi → PostgreSQL
+- Scalable real-time data streaming from **FastAPI → Kafka(3-broker cluster) → NiFi → PostgreSQL**
 
-- Medallion Architecture: Bronze → Silver → Gold
+- **Medallion Architecture: Bronze → Silver → Gold**
 
-- Automated ETL pipelines with PySpark and Airflow DAGs
+- Automated ETL pipelines with **PySpark and Airflow DAGs**
 
-- Clean, deduplicated, and business-ready datasets
+- Clean, deduplicated, and **business-ready datasets**
 
 - Analytics-ready tables for performance tracking, summary, and item-level fact tables
 
@@ -61,7 +63,7 @@ This project demonstrates how to design a scalable, cloud-portable event-driven 
 
 # 🚀 Pipeline Automation
 
-The project includes Airflow DAGs to orchestrate PySpark transformations for all Medallion layers:
+The project includes Airflow DAGs to orchestrate **PySpark transformations** for all Medallion layers:
 
 - Bronze → Silver → Gold
 
@@ -103,7 +105,7 @@ The project includes Airflow DAGs to orchestrate PySpark transformations for all
 - **PostgreSQL storage** used for simplicity; object storage with Delta/Iceberg would scale better.
 - **Simplified monitoring**; full production observability is not included.
 - **Dockerized local execution** used instead of managed cloud services.
-- - **Schema evolution** handled in PySpark rather than with a formal schema registry.
+- **Schema evolution** handled in PySpark rather than with a formal schema registry.
 
 # 📂 Repository Structure
 
@@ -123,19 +125,19 @@ Event-Driven_E-Commerce_Data_Platform/
 
 - Students learning streaming pipelines, ETL, Medallion architecture
 
-- Anyone building real-time data pipelines with Kafka, PySpark, and PostgreSQL
+- Anyone building real-time data pipelines with **Kafka, PySpark, and PostgreSQL**
 
 # 🧰 Tech Stack
 
-- Python (FastAPI, PySpark)
+- **Python (FastAPI, PySpark)**
 
-- Kafka & NiFi (Streaming ingestion)
+- **Kafka & NiFi (Streaming ingestion)**
 
-- PostgreSQL (Raw + Medallion tables)
+- **PostgreSQL (Raw + Medallion tables)**
 
-- Airflow (DAG orchestration)
+- **Airflow (DAG orchestration)**
 
-- Docker (Containerization)
+- **Docker (Containerization)**
 
 # 👤 Author Notes
 
@@ -145,8 +147,6 @@ It demonstrates how I approach system design, data quality, and scalability in m
 # 🛡️ License
 
 Licensed under the MIT License.
-
-
 
 
 
