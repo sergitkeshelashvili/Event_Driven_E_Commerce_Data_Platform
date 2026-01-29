@@ -102,9 +102,13 @@ The project includes Airflow DAGs to orchestrate **PySpark transformations** for
 - Ensures accurate analytics through deduplication and timestamp-based ordering
 
 # ⚖️ Trade-offs & Limitations
+
 - **PostgreSQL storage** used for simplicity; object storage with Delta/Iceberg would scale better.
+- 
 - **Simplified monitoring**; full production observability is not included.
+- 
 - **Dockerized local execution** used instead of managed cloud services.
+- 
 - **Schema evolution** handled in PySpark rather than with a formal schema registry.
 
 # 📂 Repository Structure
@@ -117,14 +121,9 @@ Event-Driven_E-Commerce_Data_Platform/
 ┣ nifi_ui_screenshots/             → NiFi UI screenshots showing streaming flows
 ┣ postgresql/                      → SQL scripts for database creation, schemas, and Medallion tables
 
-
-
 # 🎯 Target Audience
 
 - Data Engineers & Analysts
-
-- Students learning streaming pipelines, ETL, Medallion architecture
-
 - Anyone building real-time data pipelines with **Kafka, PySpark, and PostgreSQL**
 
 # 🧰 Tech Stack
